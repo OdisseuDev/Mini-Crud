@@ -1,0 +1,86 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecontato.css">
+    <title>Burn & Build</title>
+</head>
+<header>
+    <img src="imagens/BurnBuild.png" alt="Logo" width="250" height="auto">
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="taferas.html">Tarefas</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="main-contato-container">
+
+        <div class="contato-info">
+            <h1 style="color: #ff0000;">NOSSA EQUIPE:</h1>
+            
+            <div class="contato">
+                <h1>Telefone</h1>
+                <p>(11) 11111-1111</p>
+            </div>
+            
+            <div class="contato"> 
+                <h1>E-mail</h1>
+                <p>burnbuild@gmail.com</p>
+            </div>
+            
+            <div class="contato">
+                <h1>Endereço</h1>
+                <p>Rua do Suor, 123 - Galpão 7<br>Centro Industrial - SP</p>
+            </div>
+        </div>
+
+
+        <div class="contato-form-container">
+            <section>
+                <form action="">
+                    <h2>Envie sua mensagem</h2>
+                    <label for="nome">Digite seu nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="email">Digite seu email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefone">Digite seu telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required maxlength="11">
+
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" name="assunto" required>
+
+                    <label for="mensagem">Mensagem</label>
+                    <input type="text" id="mensagem" name="mensagem" required>
+
+
+                    <h3>Preferências de Contato</h3>
+                    <label><input type="checkbox" name="notificacoes" value="email"> Desejo receber notificações por e-mail</label>
+                    <label><input type="checkbox" name="notificacoes" value="sms"> Desejo receber notificações por SMS</label>
+                    <label><input type="checkbox" name="notificacoes" value="telefone"> Desejo ser contatado por telefone</label>
+
+            
+                    <div class="button-group">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+<footer>Burn & Build - Todos direitos reservados</footer>
+</html>

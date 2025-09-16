@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Black Ops One", system-ui;
+    background: linear-gradient(to bottom, 
+        #000000 0%, 
+        #1a0000 50%, 
+        #790808 100%);
+    color: #fb0404;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+}
+
+footer {
+    background-color: #00000056;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+header {
+    background-color: #000000;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(imagens/fogo.gif);
+    background-size: cover;
+    position: relative; 
+    width: 100%; 
+    z-index: 100; 
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 1rem; 
+
+}
+
+nav {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+}
+
+nav a {
+    color: #ffff00;
+    background-color: #000000;
+    padding: 0.7rem 1.4rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid #ffff00;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-image: url(imagens/fogo2.gif);
+    background-size: cover;
+    transform: scale(1.05);
+}
+
+
+h1 {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    font-size: 2rem;
+}
+
+p {
+    text-align: center;
+    padding: 0 1rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    max-width: 1200px;
+}
+
+.valores {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 270px;
+    min-height: 350px;
+}
+
+.valores img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #790808;
+}
+
+.produto-info {
+    padding: 1rem;
+    text-align: center;
+    color: #000;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produto-info h3 {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.preco {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #790808;
+    margin: 0.5rem 0;
+}
+
+
+.valores:hover .produto-info h3,
+.valores:hover .preco {
+    color: #fff;
+}
+
+.valores:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+    background: linear-gradient(#1a0000 0%, #790808 100%);
+    cursor: pointer;
+}
+
+
+
+
+/* REWORK BOLADO DO MODO CLARO */
+.theme-switcher {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffff00;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.theme-switcher:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.light-mode {
+    --text-color: #333333;
+    --background-color: #f5f5f5;
+    --header-bg: #ffffff;
+    --footer-bg: rgba(255, 255, 255, 0.8);
+    --nav-text: #790808;
+    --nav-hover-bg: none;
+    --nav-hover-text: #ffffff;
+    --card-bg: #ffffff;
+    --card-text: #333333;
+    --card-border: #790808;
+    --button-bg: #790808;
+    --button-text: #ffffff;
+}
+
+.light-mode body {
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+.light-mode header {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+}
+
+.light-mode footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+}
+
+.light-mode nav a {
+    color: var(--nav-text);
+    background-color: var(--nav-bg);
+    border: none;
+}
+
+.light-mode nav a:hover {
+    background-color: var(--nav-hover-bg);
+    color: var(--nav-hover-text);
+    background-image: none;
+}
+
+.light-mode .valores {
+    background: var(--card-bg);
+    color: var(--card-text);
+    border: 2px solid var(--card-border);
+}
+
+.light-mode .valores h3,
+.light-mode .valores .preco {
+    color: var(--card-text);
+}
+
+.light-mode .valores:hover {
+    background: linear-gradient(#ffffff 0%, #ffcccc 100%);
+}
+
+.light-mode .colaboradores {
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+}
+
+.light-mode form {
+    background: var(--header-bg);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+}
+
+.light-mode input[type="text"],
+.light-mode input[type="email"],
+.light-mode input[type="password"],
+.light-mode input[type="tel"] {
+    background-color: rgba(121, 8, 8, 0.1);
+    color: var(--text-color);
+    border-color: var(--card-border);
+}
+
+.light-mode button[type="submit"] {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.light-mode .contato {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    color: var(--text-color);
+    border: 2px solid var(--card-border);
+}
+
+.light-mode .contato h1 {
+    color: var(--card-border);
+}
+
+.light-mode .contato p {
+    color: var(--text-color);
+}
+
+.light-mode #titulo span {
+    color: var(--card-border);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffff00;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 4rem;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+        
+    }
+    
+    nav.active ul {
+        display: flex;
+        margin-top: 1rem;
+    }
+    
+    header {
+        padding-bottom: 1rem;
+    }
+    nav a {
+        padding: 0.7rem 1.2rem; 
+        margin-bottom: 0.5rem;
+        width: 100%;
+        text-align: center; 
+    }
+
+    .valores {
+        max-width: 45%;
+        min-height: 320px;
+    }
+    
+    .valores img {
+        height: 180px;
+    }
+
+    header img {
+        width: 200px;
+    }
+    
+    nav a {
+        border: none;
+        padding: 10px 20px; 
+        margin-top: 100px;
+
+    }
+        
+    nav ul {
+        gap: 1rem; 
+        padding: 10;
+        background-color: #000;
+
+    }
+
+    nav a:hover {
+        background-image: none;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    .menu-toggle {
+        right: 4rem;
+        font-size: 1.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.6rem;
+        background-color: #000;
+
+    }    
+    nav a {
+        width: 100%;
+        text-align: center;
+        border: none;
+
+    }
+    h1 {
+        font-size: 1.5rem;
+        padding: 1.5rem 1rem 0.5rem;
+    }
+    
+    p {
+        font-size: 0.9rem;
+        padding: 0 1rem 1.5rem;
+    }
+    
+    .container {
+        gap: 1.5rem;
+    }
+    
+    .valores {
+        max-width: 100%;
+        min-height: 300px;
+    }
+    
+    .valores img {
+        height: 160px;
+    }
+    
+    .produto-info h3 {
+        font-size: 1rem;
+    }
+    
+    .preco {
+        font-size: 1rem;
+    }
+
+    header img {
+        width: 180px;
+    }
+    
+    header strong {
+        font-size: 0.9rem;
+    }
+    
+    
+    nav a {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        margin-bottom: 10;
+    }
+
+    nav a:hover {
+        background-image: none;
+    }
+    
+    footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }    
+}
+
+
+

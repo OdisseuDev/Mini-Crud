@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini CRUD de Tarefas</title>
+    <link rel="stylesheet" href="styletarefa.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Minhas Tarefas</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="tarefas.html">Tarefas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="formulario-container">
+            <form id="form-tarefa">
+                <input type="text" id="input-tarefa" placeholder="Digite uma nova tarefa...">
+                <button type="submit" id="botao-adicionar">Adicionar</button>
+            </form>
+            <div id="mensagem" class="oculto"></div>
+        </div>
+
+        <div class="tarefas-container">
+            <ul id="lista-tarefas"></ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Minhas Tarefas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+[file content end]
